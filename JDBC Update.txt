@@ -1,0 +1,60 @@
+package com.demo;
+import java.sql.Connection; 
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException; 
+import java.sql.PreparedStatement;
+import java.sql.*;
+import java.sql.Statement; 
+
+public class Update {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String dbURL="jdbc:mysql://localhost:3307/Tamil";
+		String username = "root";
+		String password ="1234";
+		try {
+			 Connection c= DriverManager.getConnection(dbURL,username,password);
+			 if(c!=null)
+			 {
+			 System.out.print(" we got Connected....");
+			 String sql = "UPDATE Employee1 SET empDesig='Manager' where empAge>40";
+			 String sql1 = "select * from employee1 where empAge>40";
+			Statement statement = c.createStatement();
+			 ResultSet res=statement.executeQuery(sql1);
+			int count=0;
+			while(res.next()) {
+			String empName=res.getString(2);
+			String empDesig=res.getString(3);
+			Integer empAge=res.getInt(4);
+			Integer empSalary=res.getInt(5);
+			String out="User #%d:%s-%s-%d-%d";
+			System.out.printf(out,++count,empName,empDesig,empAge,empSalary);
+			 }
+			PreparedStatement statement1 = c.prepareStatement(sql);
+			int rowsUpdated = statement1.executeUpdate();
+			if(rowsUpdated>0){
+			System.out.println("\n Updated");
+			}else
+			{
+			System.out.println("Not Updated");
+			}
+			}
+			 else
+			 {
+			 System.out.print("uff we didn't get connected....");
+			 }
+			 c.close();
+			 }
+			 catch(SQLException e)
+			 {
+			 e.printStackTrace();
+			 }
+			 
+			
+
+
+	}
+
+}

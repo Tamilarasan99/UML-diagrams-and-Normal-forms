@@ -1,0 +1,58 @@
+package com.demo;
+import java.sql.Connection; 
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException; 
+import java.sql.PreparedStatement;
+import java.sql.*;
+import java.sql.Statement; 
+
+public class Create {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String dbURL="jdbc:mysql://localhost:3307/Tamil";
+		String username = "root";
+		String password ="1234";
+		 try
+		 {
+			 Connection conn=DriverManager.getConnection(dbURL, username, password);
+					 if(conn!=null)
+					 {
+						 System.out.println("yoo we get connected");
+						 String sql="insert into employee1(empName,empDesig,empAge,empSalary)values(?,?,?,?)";
+
+						 PreparedStatement pm = conn.prepareStatement(sql);
+						  // pm.setInt(1,1);
+							pm.setString(1,"Kumar");
+							pm.setString(2,"Doctor");
+							pm.setInt(3,27);
+							pm.setInt(4,45000);
+							int rowsInserted=pm.executeUpdate();
+							if(rowsInserted>0)
+							{
+								System.out.println("insterted");
+							}
+							else
+							{
+								System.out.println("ohh noo");
+							}
+							conn.close();
+							
+						 //System.out.println("yoo we get connected");
+					 }
+					 else
+					 {
+						 System.out.println("oopss not connected");
+					 }
+			 conn.close();
+		 }
+		 catch(SQLException ex)
+		 {
+			 ex.printStackTrace();
+		 }
+	
+
+	}
+
+}
