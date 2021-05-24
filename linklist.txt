@@ -1,0 +1,44 @@
+package com.col;
+import java.util.*;
+
+public class Link {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		LinkedList<String> ll=new LinkedList<>();
+		ll.add("After");
+		ll.add("Vampire Dairies");
+		ll.add("MoneyHeist");
+		ll.add("FiveFeetApart");
+		ll.add("You");
+		ll.add("NoteBook");
+		ll.add("Twilight");
+		System.out.println("linKedlist is"+ll);
+		//get
+		String ws=ll.get(3);
+		System.out.println("Series are"+ws);
+		 //remove
+		 ll.remove("NoteBook");
+		 System.out.println("After invoking remove(object) method: "+ll);
+		 ll.remove(0);
+		 System.out.println("After invoking remove(index) method: "+ll);
+		 //removeFirst
+		 ll.removeFirst();
+		 System.out.println("After invoking removeFirst() method: "+ll);
+		 //removeLast
+		 ll.removeLast();
+		 System.out.println("After invoking removeLast() method: "+ll);
+		 //removeFirstOccurence
+		 ll.removeFirstOccurrence("Gaurav");
+		 System.out.println("After invoking removeFirstOccurrence() method:"+ll);
+		 //removeLastOccurence
+		 ll.removeLastOccurrence("Harsh");
+		 System.out.println("After invoking removeLastOccurrence() method: "+ll);
+		 //clear
+		 ll.clear();
+		 System.out.println("After invoking clear() method: "+ll);
+		 
+		 
+	}
+
+}

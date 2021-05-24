@@ -1,0 +1,40 @@
+package com.abc;
+
+public class Hierarchical {
+	public void m1(){
+		System.out.println("Hi");
+	}
+
+}
+package com.abc;
+
+public class Cl2 extends Hierarchical {
+	public void m2(){
+		System.out.print("hello");
+	}
+
+}
+
+package com.abc;
+
+public class Cl3 extends Hierarchical {
+	public void m3(){
+		System.out.print("BYE");
+	}
+
+}
+package com.abc;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Cl2 ob1 = new Cl2();
+		Cl3 ob2 = new Cl3();
+		ob1.m1();
+		ob1.m2();
+		
+	}
+
+}

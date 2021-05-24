@@ -1,0 +1,29 @@
+package com.col;
+import java.util.*;
+import java.util.Comparator;
+
+public class Collection {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		List<String> mv = new ArrayList<>();
+	    mv.add("Charlie");
+	    mv.add("CIA");
+	    mv.add("Pirates of the carabiean");
+	    mv.add("Tenet");
+	    mv.add("Panjathanthiram");
+	    mv.add("Big hero 6");
+	    System.out.println("The Elements of mv is "+ mv);
+	    mv.set(3, "Batman");
+	    System.out.println("The Elements of mv is "+ mv);
+	    mv.remove(3);
+	    System.out.println("The Elements of mv is "+ mv);
+	    
+	    System.out.println("The size of mv is "+ mv.size() );
+	    Collections.sort(mv);
+	    System.out.println("The Sorted list of mv is "+ mv);
+	    mv.sort(Comparator.reverseOrder());
+	    System.out.println("The Reverse order of mv is "+ mv);
+	}
+
+}

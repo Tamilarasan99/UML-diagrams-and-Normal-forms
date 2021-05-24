@@ -1,0 +1,43 @@
+package com.abc;
+
+public class Multilevel {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Cat c = new Cat();
+		c.eat();
+		c.bark();
+		c.jump();
+		c.setName("Sunapana");
+		System.out.print(c.getName());
+		System.out.print(c.num);
+		
+		
+
+	}
+
+}
+package com.abc;
+
+public class Dog extends Animals {
+
+	void bark()
+	{
+		System.out.println("barking...");
+		}  
+	}  
+
+
+package com.abc;
+
+public class Cat extends Dog {
+	
+	void jump()
+	{
+		System.out.println("jumping");
+		
+
+	}  
+	 
+}

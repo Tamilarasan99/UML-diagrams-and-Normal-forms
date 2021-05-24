@@ -1,0 +1,21 @@
+package com.abc;
+abstract class Ab1 {
+abstract void run();
+
+}
+package com.abc;
+
+ class Ab2 extends Ab1 {
+	 void run()
+	 {
+		 System.out.println("running safely");
+		 }
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Ab1 a = new Ab2();
+		a.run();
+
+	}
+
+}

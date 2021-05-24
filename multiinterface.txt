@@ -1,0 +1,49 @@
+package com.abc;
+
+public class Rock implements Newone,Second {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Rock r = new Rock();
+		r.rabbit();
+		r.dog();
+		r.cat();
+		r.tiger();
+
+	}
+
+	@Override
+	public void rabbit() {
+		
+		System.out.println("Hi I can run");
+	}
+
+	@Override
+	public void dog() {
+		
+		System.out.println("Hi I can run faster than rabbit");
+	}
+
+	@Override
+	public void cat() {
+		
+		System.out.println("Hi I can run even faster than dog");
+	}
+
+	public void tiger(){
+		System.out.println("Hi I can run even faster than these three");
+	}
+}
+package com.abc;
+
+public interface Newone {
+	public void dog();
+	public void cat();
+	public void rabbit();
+
+}
+package com.abc;
+
+public interface Second {
+ public void tiger();
+}

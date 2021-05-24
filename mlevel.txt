@@ -1,0 +1,46 @@
+package com.inhert;
+
+public class multi {
+	public void v(){
+		System.out.println("Hi I am Class 0 ");
+	}
+
+
+	
+
+}
+package com.inhert;
+
+public class Multi1 extends multi {
+	public void a(){
+		System.out.println("Hi I am Class 1 ");
+	}
+
+
+}
+package com.inhert;
+
+public class Multi2 extends Multi1 {
+	public void b(){
+		System.out.println("Hi I am Class 2");
+	}
+
+
+}
+package com.inhert;
+
+public class Multi3 extends Multi2  {
+	public void c(){
+		System.out.println("Hi I am  Class 3");
+	}
+	public static void main(String[] args ){
+		Multi3 m = new Multi3();
+		m.v();
+		m.a();
+		m.b();
+		m.c();
+		
+	}
+
+
+}
